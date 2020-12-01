@@ -23,3 +23,5 @@ spec:
         env:
           - name: PORT
             value: "3000"
+		  - name: CHUNK
+		  	value: 2

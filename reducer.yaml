@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: buoyant-apogee-295608
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: reducer
@@ -16,7 +16,7 @@ spec:
       containers:
       - name: reducer
         # Replace $GCLOUD_PROJECT with your project ID
-        image: gcr.io/buoyant-apogee-295608/roy2:reducer
+        image: gcr.io/buoyant-apogee-295608/roy2@sha256:884b4bee80a7030aa68cbf79af03c702573354266e5786aeba0edc32fa9cfa1f
         # This app listens on port 8080 for web traffic by default.
         ports:
         - containerPort: 3000
