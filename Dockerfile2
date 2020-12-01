@@ -1,0 +1,14 @@
+#DICKERFILE
+FROM node:12
+RUN mkdir ./src
+WORKDIR ./src/
+
+COPY package*.json ./
+COPY . ./
+RUN npm install
+ENV TYPE REDUCER
+RUN echo $TYPE
+EXPOSE 3000
+CMD ["node","node.js","input1"]
+
+

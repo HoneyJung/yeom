@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reducer2
+spec:
+  type: LoadBalancer
+  selector:
+    app: reducer2
+  ports:
+  - port: 3000
+    targetPort: 3000

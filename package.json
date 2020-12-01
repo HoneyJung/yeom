@@ -1,0 +1,23 @@
+{
+  "name": "step3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "json": "^10.0.0",
+    "os": "^0.1.1",
+    "python-shell": "^2.0.3",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

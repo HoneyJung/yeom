@@ -1,0 +1,25 @@
+# This file configures the hello-world app which serves public web traffic.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buoyant-apogee-295608-master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: master
+  template:
+    metadata:
+      labels:
+        app: master
+    spec:
+      containers:
+      - name: master
+        # Replace $GCLOUD_PROJECT with your project ID
+        image: gcr.io/buoyant-apogee-295608/roy2@sha256:cea3087777dcce6c820a9ff1ed43abcd8631866930d3d5996275fe21651607d0
+        # This app listens on port 8080 for web traffic by default.
+        ports:
+        - containerPort: 3000
+        env:
+          - name: PORT
+            value: "3000"
